@@ -6,9 +6,9 @@
 
 body {
   padding: 50px;
-  color: #f7f7f7;
+  color: #000000;
   min-height: 100vh;
-  background: #252525;
+  background: #999999;
   text-rendering: optimizeSpeed;
   font-family: "Roboto", sans-serif;
 }
@@ -18,13 +18,13 @@ body {
   max-width: 50%;
   margin: 0 auto;
   text-align: center;
-  background: #333;
+  background: #FFFFFF;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
 }
 
 h1 {
   font-weight: 300;
-  color: #44c0b6;
+  color: #000000;
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
@@ -67,16 +67,18 @@ button {
   appearance: none;
   color: currentcolor;
   background: transparent;
-  border: 1px solid #828691;
+  border:  1px solid #828691;
 }
 
 .add-button {
-  color: #44c0b6;
+  color: #000000;
   border-left: none;
+  
 }
 
 .delete-button {
   color: #fe6a6a;
+  border-radius: 30px;
 }
 
 ul {
@@ -90,10 +92,11 @@ li {
   padding: 0.85em;
   text-align: left;
   margin-bottom: 0.5rem;
-  background: #494847;
+  background: #FFFFCC;
   letter-spacing: 0.02rem;
   transition: all 0.3s ease-out;
-  border-left: 5px solid #cf972e;
+  border-left: 20px solid #cf972e;
+  border-radius: 30px;
 }
 
 li:last-child {
@@ -103,6 +106,6 @@ li:last-child {
 .empty {
   font-size: 20px;
   font-weight: 400;
-  color: #cf972e;
+  color: #000000;
   letter-spacing: 0.2rem;
 }
