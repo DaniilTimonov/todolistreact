@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useState } from "react"; //импортируем хук usestate 
 import "./App.css";
 
 const App = () => {
-  const [todos, setTodos] = useState([]);
-  const [todo, setTodo] = useState("");
+  const [todos, setTodos] = useState([]); // создаем хук для отслеживания состояния массива todos для последующего добавлениям в него элементов  
+  const [todo , setTodo] = useState(""); // создаем состояниие todo (функция getter, отображает текущее значение ), setTodo  метод (функция setter, обновляющее состояние)
 
-  const addTodo = () => {
-    if (todo !== "") {
+  const addTodo = () => { //функция для добавления элемента todo в массив todos
+    if (todo !== "") {  // создание условной конструкции, которая проверяет, чтобы значение не было пустым
       setTodos([...todos, todo]);
-      setTodo("");
+      setTodo(""); //очищает поле ввода после добавления в список Todos
     }
   };
 
@@ -20,6 +20,7 @@ const App = () => {
   };
 
   return (
+   
     <div className="App">
       <h1>Задачи для выполнения</h1>
 
@@ -29,11 +30,11 @@ const App = () => {
           name="todo"
           value={todo}
           placeholder="Создать задачу"
-          onChange={(e) => {
-            setTodo(e.target.value);
+          onChange={(e) => { //обработчик событий onChange срабатывает каждый раз когда значение поля изменяется
+            setTodo(e.target.value); /* setter - функция присоединяется к обработчику событий  , используя обьект event*/
           }}
         />
-        <button className="add-button" onClick={addTodo}>
+        <button className="add-button" onClick={addTodo}> {/* передаем функцию addTodo в обработчик onclick */} 
           добавить
         </button>
       </div>
