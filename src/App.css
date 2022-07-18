@@ -32,6 +32,7 @@ h1 {
 
 .input-wrapper {
   margin: 3.5rem;
+  
 }
 
 .todos-wrapper {
@@ -47,6 +48,7 @@ h1 {
 input {
   width: 450px;
   padding: 0.8em;
+  border-radius: 10px;
 }
 
 input:focus {
@@ -73,12 +75,14 @@ button {
 .add-button {
   color: #000000;
   border-left: none;
+  border-radius: 90px;
   
 }
 
 .delete-button {
   color: #fe6a6a;
   border-radius: 30px;
+  margin:0.7rem;
 }
 
 ul {
@@ -108,4 +112,17 @@ li:last-child {
   font-weight: 400;
   color: #000000;
   letter-spacing: 0.2rem;
+}
+.edit-wrapper {
+  visibility: hidden;
+  margin:0.7rem;
+  
+}
+.editinput {
+  width: 60%;
+}
+.okbutton {
+  width: 20%;
+  border-radius: 10px;
+
 }

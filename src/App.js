@@ -12,12 +12,21 @@ const App = () => {
     }
   };
 
-  const deleteTodo = (text) => {
+  const deleteTodo = (text) => { //функция для удаления элемента списка
     const newTodos = todos.filter((todo) => {
       return todo !== text;
     });
     setTodos(newTodos);
   };
+  
+ 
+  
+  const showeditform = () => { //функция для отображения формы редактирования
+ document.getElementsByClassName("edit-wrapper")[0].style.visibility ="visible";
+
+    
+  };
+
 
   return (
    
@@ -40,12 +49,27 @@ const App = () => {
       </div>
 
       {todos?.length > 0 ? (
-        <ul className="todo-list">
+        <ol className="todo-list">
           {todos.map((todo, index) => (
             <div className="todo">
-              <li key={index}> {todo} </li>
-
+              <li key={index}> {todo}  {/* создание кнопки редактирования */}</li>
+              
+             
+              <div className="edit-wrapper"> {/* обертка для формы редактирования */}
+              <input //инпут для редактирования
+              type="text"
+              className="editinput"
+              />
               <button
+              className="okbutton"
+              
+              >ok</button>
+              </div>
+              <button //создание кнопки редактирования
+               onClick={() => {
+                showeditform(todo) ;    
+                 } }>2</button>
+              <button //создание кнопки удаления
                 className="delete-button"
                 onClick={() => {
                   deleteTodo(todo);
@@ -53,9 +77,11 @@ const App = () => {
               >
                 Удалить
               </button>
+        
+              
             </div>
           ))}
-        </ul>
+        </ol>
       ) : (
         <div className="empty">
           <p>Задачи отсутствуют</p>
