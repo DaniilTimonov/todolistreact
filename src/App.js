@@ -13,17 +13,19 @@ const App = () => {
   };
 
   const deleteTodo = (text) => { //функция для удаления элемента списка
-    const newTodos = todos.filter((todo) => {
-      return todo !== text;
+    console.log(todos);
+    const newTodos = todos.filter((todo_elem) => {
+      return todo_elem !== text;
     });
+    console.log(newTodos);
     setTodos(newTodos);
   };
   
  
   
-  const showeditform = () => { //функция для отображения формы редактирования
- document.getElementsByClassName("edit-wrapper")[0].style.visibility ="visible";
-
+  const showeditform = (text, className) => { //функция для отображения формы редактирования
+ document.getElementsByClassName(className)[0].style.visibility ="visible";
+  /* как назначать динамически классы? */
     
   };
 
@@ -37,7 +39,7 @@ const App = () => {
         <input
           type="text"
           name="todo"
-          value={todo}
+          value ={todo} //привязка нужна для очистки значение value
           placeholder="Создать задачу"
           onChange={(e) => { //обработчик событий onChange срабатывает каждый раз когда значение поля изменяется
             setTodo(e.target.value); /* setter - функция присоединяется к обработчику событий  , используя обьект event*/
@@ -51,23 +53,23 @@ const App = () => {
       {todos?.length > 0 ? (
         <ol className="todo-list">
           {todos.map((todo, index) => (
-            <div className="todo">
-              <li key={index}> {todo}  {/* создание кнопки редактирования */}</li>
+       
+              <li key={index}> {todo}  {/* создание кнопки редактирования */}
               
-             
-              <div className="edit-wrapper"> {/* обертка для формы редактирования */}
+              <div className={`edit-wrapper item-${index}`}> {/* обертка для формы редактирования */}
               <input //инпут для редактирования
               type="text"
-              className="editinput"
+              className="edit-input"
+              value = {todo}
               />
               <button
-              className="okbutton"
+              className="ok-button"
               
               >ok</button>
               </div>
               <button //создание кнопки редактирования
                onClick={() => {
-                showeditform(todo) ;    
+                showeditform(todo, `item-${index}`);    
                  } }>2</button>
               <button //создание кнопки удаления
                 className="delete-button"
@@ -76,10 +78,8 @@ const App = () => {
                 }}
               >
                 Удалить
-              </button>
-        
-              
-            </div>
+              </button> 
+              </li>        
           ))}
         </ol>
       ) : (
