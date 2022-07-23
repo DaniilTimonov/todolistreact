@@ -32,7 +32,7 @@ h1 {
 
 .input-wrapper {
   margin: 3.5rem;
-  
+
 }
 
 .todos-wrapper {
@@ -69,20 +69,20 @@ button {
   appearance: none;
   color: currentcolor;
   background: transparent;
-  border:  1px solid #828691;
+  border: 1px solid #828691;
 }
 
 .add-button {
   color: #000000;
   border-left: none;
   border-radius: 90px;
-  
+
 }
 
 .delete-button {
   color: #fe6a6a;
   border-radius: 30px;
-  margin:0.7rem;
+  margin: 0.7rem;
 }
 
 ul {
@@ -113,16 +113,89 @@ li:last-child {
   color: #000000;
   letter-spacing: 0.2rem;
 }
+
 .edit-wrapper {
-  visibility: hidden;
-  margin:0.7rem;
-  
+  display: none;
+  margin: 0.7rem;
+
 }
+
 .edit-input {
   width: 60%;
 }
+
 .ok-button {
   width: 20%;
   border-radius: 10px;
 
+}
+
+@media (max-width: 414px) {
+  body {
+    padding: 0;
+  }
+
+  .App {
+    max-width: unset;
+    width: 70%;
+    padding: 5px;
+  }
+
+  h1 {
+    font-weight: 300;
+    color: #000000;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  .input-wrapper {
+    margin: 2rem;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+
+  .input-creator {
+    width: 200px;
+  }
+
+  .add-button {
+
+    width: 90px;
+    height: 20px;
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .li-toadd {
+    width: 200px;
+
+
+  }
+
+  .delete-button {
+    width: 90px;
+    height: 25px;
+    font-size: 12px;
+    padding: 0;
+  }
+
+
+  .edit-button {
+    width: 20px;
+  }
+
+  .ok-button {
+    width: 30%;
+
+  }
+
+  .edit-wrapper {
+    display: none;
+    align-items: center;
+  }
 }
