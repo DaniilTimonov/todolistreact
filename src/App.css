@@ -130,6 +130,292 @@ li:last-child {
 
 }
 
+
+
+
+@media (max-width: 1079px) {
+  body {
+    padding: 0;
+  }
+
+  .App {
+    max-width: unset;
+    width: 70%;
+    padding: 5px;
+  }
+
+  h1 {
+    font-weight: 300;
+    color: #000000;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  .input-wrapper {
+    margin: 2rem;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+
+  .input-creator {
+    width: 200px;
+  }
+
+  .add-button {
+
+    width: 90px;
+    height: 20px;
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .li-toadd {
+    width: 200px;
+
+
+  }
+
+  .delete-button {
+    width: 90px;
+    height: 25px;
+    font-size: 12px;
+    padding: 0;
+  }
+
+
+  .edit-button {
+    width: 20px;
+  }
+
+  .ok-button {
+    width: 30%;
+
+  }
+
+  .edit-wrapper {
+    display: none;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 1064px) {
+  body {
+    padding: 0;
+  }
+
+  .App {
+    max-width: unset;
+    width: 70%;
+    padding: 5px;
+  }
+
+  h1 {
+    font-weight: 300;
+    color: #000000;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  .input-wrapper {
+    margin: 2rem;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+
+  .input-creator {
+    width: 400px;
+  }
+
+  .add-button {
+
+    width: 90px;
+    height: 40px;
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .li-toadd {
+    width: 200px;
+
+
+  }
+
+  .delete-button {
+    width: 90px;
+    height: 25px;
+    font-size: 12px;
+    padding: 0;
+  }
+
+
+  .edit-button {
+    width: 20px;
+  }
+
+  .ok-button {
+    width: 30%;
+
+  }
+
+  .edit-wrapper {
+    display: none;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 922px) {
+  body {
+    padding: 0;
+  }
+
+  .App {
+    max-width: unset;
+    width: 70%;
+    padding: 5px;
+  }
+
+  h1 {
+    font-weight: 300;
+    color: #000000;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  .input-wrapper {
+    margin: 2rem;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+
+  .input-creator {
+    width: 200px;
+  }
+
+  .add-button {
+
+    width: 90px;
+    height: 20px;
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .li-toadd {
+    width: 200px;
+
+
+  }
+
+  .delete-button {
+    width: 90px;
+    height: 25px;
+    font-size: 12px;
+    padding: 0;
+  }
+
+
+  .edit-button {
+    width: 20px;
+  }
+
+  .ok-button {
+    width: 30%;
+
+  }
+
+  .edit-wrapper {
+    display: none;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 856px) {
+  body {
+    padding: 0;
+  }
+
+  .App {
+    max-width: unset;
+    width: 70%;
+    padding: 5px;
+  }
+
+  h1 {
+    font-weight: 300;
+    color: #000000;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  .input-wrapper {
+    margin: 2rem;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+
+  .input-creator {
+    width: 200px;
+  }
+
+  .add-button {
+
+    width: 90px;
+    height: 20px;
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .li-toadd {
+    width: 200px;
+
+
+  }
+
+  .delete-button {
+    width: 90px;
+    height: 25px;
+    font-size: 12px;
+    padding: 0;
+  }
+
+
+  .edit-button {
+    width: 20px;
+  }
+
+  .ok-button {
+    width: 30%;
+
+  }
+
+  .edit-wrapper {
+    display: none;
+    align-items: center;
+  }
+
+}
 @media (max-width: 414px) {
   body {
     padding: 0;
