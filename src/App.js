@@ -2,12 +2,15 @@ import { useState } from "react"; //импортируем хук usestate
 import "./App.css";
 
 const App = () => {
+  
   const [id, setId] = useState(0);
   const [todos, setTodos] = useState([]); // создаем хук для отслеживания состояния массива todos для последующего добавлениям в него элементов  
   const [todo, setTodo] = useState({}); // создаем состояниие todo (функция getter, отображает текущее значение ), setTodo  метод (функция setter, обновляющее состояние)
 
   const addTodo = () => { //функция для добавления элемента todo в массив todos
-    if (todo !== "") {  // создание условной конструкции, которая проверяет, чтобы значение не было пустым
+    
+    if (todo.length) {  // создание условной конструкции, которая проверяет, чтобы значение не было пустым
+      
       setTodos([...todos, { text: todo, id: id }]);
       /*   setTodos([...todos, todo]); */
       setId(id + 1);
