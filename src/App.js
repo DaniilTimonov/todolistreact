@@ -1,4 +1,5 @@
 import { useState } from "react"; //импортируем хук usestate 
+import { ImPencil2 } from 'react-icons/im';
 import "./App.css";
 
 const App = () => {
@@ -18,6 +19,10 @@ const App = () => {
       
     }
   };
+
+  const editinput = () => {
+    
+  }
 
   const deleteTodo = (text) => { //функция для удаления элемента списка
     console.log(todos);
@@ -84,7 +89,7 @@ const App = () => {
                 className="edit-button"
                 onClick={() => {
                   showeditform(`item-${todo.id}`);
-                }}>2</button>
+                }}><ImPencil2/></button>
               <button //создание кнопки удаления
                 className="delete-button"
                 onClick={() => {

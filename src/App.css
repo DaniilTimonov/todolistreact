@@ -129,6 +129,11 @@ li:last-child {
   border-radius: 10px;
 
 }
+.edit-button {
+  width: 60px;
+ 
+  border: 0px;
+}
 
 @media (max-width: 414px) {
   body {
@@ -187,6 +192,8 @@ li:last-child {
 
   .edit-button {
     width: 20px;
+ 
+    border: 0px;
   }
 
   .ok-button {
