@@ -15,9 +15,10 @@ const App = () => {
       setTodos([...todos, { text: todo, id: id }]);
       /*   setTodos([...todos, todo]); */
       setId(id + 1);
-      setTodo({ text: "" }); //очищает поле ввода после добавления в список Todos
-      
+      setTodo({ text: ""}); //очищает поле ввода после добавления в список Todos
+        
     }
+    
   };
 
   const editinput = () => {
@@ -35,8 +36,6 @@ const App = () => {
   const updateTodo = (event, todo) => {
     console.log(event, todo);
   }
-
-
   const showeditform = (className) => { //функция для отображения формы редактирования
     document.getElementsByClassName(className)[0].style.display = "flex";
     console.log(className);
