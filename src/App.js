@@ -16,15 +16,15 @@ const App = () => {
       /*   setTodos([...todos, todo]); */
       setId(id + 1);
       setTodo({ text: ""}); //очищает поле ввода после добавления в список Todos
-        
-    }
+ }
     
   };
 
-  const editinput = () => {
-    
+  const editinput = (text) => {
+    console.log('ok pressed');
+  
   }
-
+  
   const deleteTodo = (text) => { //функция для удаления элемента списка
     console.log(todos);
     const newTodos = todos.filter((todo_elem) => {
@@ -34,11 +34,11 @@ const App = () => {
     setTodos(newTodos);
   };
   const updateTodo = (event, todo) => {
-    console.log(event, todo);
+ 
   }
   const showeditform = (className) => { //функция для отображения формы редактирования
     document.getElementsByClassName(className)[0].style.display = "flex";
-    console.log(className);
+  
   };
   return (
 
@@ -78,7 +78,9 @@ const App = () => {
                 />
                 <button
                   className="ok-button"
-
+                  onClick={() => {
+                    editinput();
+                  }}
                 >ok</button>
               </div>
               <button //создание кнопки редактирования
