@@ -1,4 +1,5 @@
 import { useState } from "react"; //импортируем хук usestate 
+import { ImPencil2 } from 'react-icons/im';
 import "./App.css";
 
 const App = () => {
@@ -14,10 +15,15 @@ const App = () => {
       setTodos([...todos, { text: todo, id: id }]);
       /*   setTodos([...todos, todo]); */
       setId(id + 1);
-      setTodo({ text: "" }); //очищает поле ввода после добавления в список Todos
-      
+      setTodo({ text: ""}); //очищает поле ввода после добавления в список Todos
+        
     }
+    
   };
+
+  const editinput = () => {
+    
+  }
 
   const deleteTodo = (text) => { //функция для удаления элемента списка
     console.log(todos);
@@ -30,8 +36,6 @@ const App = () => {
   const updateTodo = (event, todo) => {
     console.log(event, todo);
   }
-
-
   const showeditform = (className) => { //функция для отображения формы редактирования
     document.getElementsByClassName(className)[0].style.display = "flex";
     console.log(className);
@@ -81,7 +85,7 @@ const App = () => {
                 className="edit-button"
                 onClick={() => {
                   showeditform(`item-${todo.id}`);
-                }}>2</button>
+                }}><ImPencil2/></button>
               <button //создание кнопки удаления
                 className="delete-button"
                 onClick={() => {
