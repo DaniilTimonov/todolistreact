@@ -36,9 +36,6 @@ const App = () => {
     document.getElementsByClassName(className)[0].style.display = "flex";
     console.log(className);
   };
-
-
-
   return (
 
     <div className="App">

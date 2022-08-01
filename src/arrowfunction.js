@@ -1,7 +1,7 @@
 function full(text){
-return text + "Abra"
+return text + "Animal"
 }
-console.log(full('KOZEL'));
+console.log(full('KOZEL '));
 
-const bar = ((text) => text + 'Abra');
-console.log(bar('KOZEL'));
+const bar = ((text) => text + 'Animal');
+console.log(bar('KOZEL '));
