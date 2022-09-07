@@ -4,6 +4,8 @@ import "./App.css";
 
 const App = () => {
   
+
+
   const [id, setId] = useState(0);
   const [todos, setTodos] = useState([]); // создаем хук для отслеживания состояния массива todos для последующего добавлениям в него элементов  
   const [todo, setTodo] = useState({}); // создаем состояниие todo (функция getter, отображает текущее значение ), setTodo  метод (функция setter, обновляющее состояние)
@@ -20,10 +22,12 @@ const App = () => {
     
   };
 
-  const editinput = (text) => {
+  const editinput = () => {
     console.log('ok pressed');
-  
-  }
+
+
+ 
+  };
   
   const deleteTodo = (text) => { //функция для удаления элемента списка
     console.log(todos);
@@ -33,8 +37,13 @@ const App = () => {
     console.log(newTodos);
     setTodos(newTodos);
   };
-  const updateTodo = (event, todo) => {
+
  
+
+
+  const updateTodo = (event, todo) => {
+   console.log('function_updatetodowork');
+   console.log(todo);
   }
   const showeditform = (className) => { //функция для отображения формы редактирования
     document.getElementsByClassName(className)[0].style.display = "flex";
@@ -74,12 +83,16 @@ const App = () => {
                   defaultValue={todo.text}
                   onChange={(e) => { //обработчик событий onChange срабатывает каждый раз когда значение поля изменяется
                     updateTodo(e, todo);
+                    console.log(todo.text);
                   }}
                 />
                 <button
                   className="ok-button"
                   onClick={() => {
                     editinput();
+                    console.log(todo);
+                    console.log('ok_button')
+                    updateTodo( todo);
                   }}
                 >ok</button>
               </div>
@@ -91,6 +104,7 @@ const App = () => {
               <button //создание кнопки удаления
                 className="delete-button"
                 onClick={() => {
+                  
                   deleteTodo(todo.text);
                 }}
               >
